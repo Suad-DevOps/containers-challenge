@@ -6,5 +6,8 @@ services:
       - "5000:5000"
   redis:
     image: redis
-  
+    volumes:
+      - redis-data:/data
+volumes: 
+  redis-data:
   
