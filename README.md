@@ -19,6 +19,9 @@ To make the app scalable, I ran multiple instances of the Flask service with NGI
 ---
 
 ## 📁 Project Structure
+## 📁 Project Structure
+
+```
 containers-challenge/
 ├── app/
 │   ├── templates/
@@ -33,8 +36,7 @@ containers-challenge/
 ├── .gitignore
 ├── docker-compose.yml
 └── README.md
-
----
+```
 
 ## 📸 Screenshots
 
