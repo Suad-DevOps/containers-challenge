@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask Redis App</title>
+    <style>
+      body {
+        background-color: #1a1a2e;
+        color: #e0e0ff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 2rem;
+      }
+      .card {
+        background-color: #16213e;
+        border: 1px solid #2a2a5a;
+        border-radius: 12px;
+        padding: 2rem;
+        width: 300px;
+        margin: 2rem auto;
+      }
+      .label {
+        font-size: 13px;
+        color: #8888aa;
+        letter-spacing: 2px;
+      }
+      .count {
+        font-size: 64px;
+        font-weight: bold;
+        color: #7f77dd;
+      }
+      button {
+        background-color: #534ab7;
+        color: #eeedfe;
+        border: none;
+        border-radius: 8px;
+        padding: 0.75rem 2rem;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #7f77dd;
+      }
+      .quote-box {
+        margin: 2rem auto;
+        max-width: 500px;
+        padding: 1rem;
+        border-left: 3px solid #7f77dd;
+        text-align: left;
+        color: #8888aa;
+        font-style: italic;
+      }
+      .tech-stack {
+        margin: 2rem auto;
+        max-width: 500px;
+      }
+      .tech-title {
+        color: #8888aa;
+        font-size: 13px;
+        letter-spacing: 2px;
+      }
+      .tech-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+      .tech-badge {
+        background-color: #16213e;
+        border: 1px solid #534ab7;
+        color: #7f77dd;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flask + Redis Live App</h1>
+    <p>A multi-container application built with Flask, Redis, Docker and Nginx</p>
+    <p>by <a href="https://github.com/Suad-DevOps" style="color: #7f77dd;">Suad-DevOps</a></p>
+
+    <div class="card">
+      <p class="label">VISIT COUNT</p>
+      <p class="count" id="count">{{ count if count else 'Click below!' }}</p>
+      <button onclick="window.location.href='/count'">Increment Count</button>
+    </div>
+
+    <div class="quote-box">
+      <p id="quote"></p>
+    </div>
+
+    <div class="tech-stack">
+      <p class="tech-title">Built With</p>
+      <div class="tech-items">
+        <span class="tech-badge">Python Flask</span>
+        <span class="tech-badge">Redis</span>
+        <span class="tech-badge">Docker</span>
+        <span class="tech-badge">Docker Compose</span>
+        <span class="tech-badge">Nginx</span>
+      </div>
+    </div>
+
+    <script>
+      const quotes = [
+        "The best way to get started is to quit talking and begin doing.",
+        "Push yourself, because no one else is going to do it for you.",
+        "Great things never come from comfort zones.",
+        "Dream it. Wish it. Do it.",
+        "Success doesn't just find you. You have to go out and get it.",
+        "The harder you work for something, the greater you'll feel when you achieve it.",
+      ];
+      const random = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById('quote').textContent = random;
+    </script>
+  </body>
+</html>
