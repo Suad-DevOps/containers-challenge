@@ -18,7 +18,7 @@ To make the app scalable, I ran multiple instances of the Flask service with NGI
 
 ---
 
-## 📁 Project Structure
+
 ## 📁 Project Structure
 
 ```
