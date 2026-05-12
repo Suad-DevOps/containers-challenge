@@ -104,7 +104,7 @@ I used a Docker volume to give Redis persistent storage. Without a volume, all t
 ---
 
 ## Environment Variables
-Instead of hardcoding the Redis host and port directly in app.py, I used environment variables. This means I can change the configuration in docker-compose.yml without touching the application code. It also makes the app more flexible across different environments.
+Instead of hardcoding the Redis host and port directly in app.py, I used environment variables. This means I can change the configuration in docker compose.yml without touching the application code. It also makes the app more flexible across different environments.
 
 ```python
 redis = Redis(
@@ -137,12 +137,12 @@ cd containers-challenge
 
 2. Start the application
 ```bash
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
 3. Scale Flask to multiple instances
 ```bash
-docker-compose up -d --scale web=3
+docker compose up -d --scale web=3
 ```
 
 4. Open your browser and go to
@@ -150,7 +150,7 @@ http://localhost:5000
 
 5. Tear down the containers
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ---
